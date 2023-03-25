@@ -1,14 +1,26 @@
+//soluzione 
+const container = document.querySelector('.container');
 
-//soluzione
-for(let i = 1; i < 101; i++){
+for(let i = 1; i <= 100; i++){
+
+  const box = document.createElement('div');
+  box.className = 'box';
+
+  let output = i;
+
   if(!(i % 15)){
-    console.log('fizzbuzz');
+    output = 'FizzBuzz';
+    box.classList.add('fizzbuzz');
   }else if(!(i % 3)){
-    console.log('fizz');
+    output = 'Fizz'
+    box.classList.add('fizz');
   }else if(!(i % 5)){
-    console.log('buzz');
-  }else{
-    console.log(i);
+    output = 'Buzz'
+    box.classList.add('buzz');
   }
-}
 
+  box.append(output);
+
+  container.append(box);
+
+}
