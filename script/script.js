@@ -1,5 +1,5 @@
 
-//soluzione corretta
+//soluzione
 for(let i = 1; i < 101; i++){
   if(!(i % 15)){
     console.log('fizzbuzz');
